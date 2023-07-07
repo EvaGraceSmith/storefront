@@ -1,5 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { selectCategory } from '../../store/categories';
+import Button from '@mui/material/Button';
+import ButtonGroup from '@mui/material/ButtonGroup';
+import Box from '@mui/material/Box';
 
 const Categories = () => {
   const {categories} = useSelector((state) => state.categories);
@@ -13,13 +16,27 @@ const Categories = () => {
   return (
     <div>
       <h2>Categories</h2>
-      <ul>
-        {categories.map((category) => (
-          <li key={category.id} onClick={() => handleCategoryClick(category.name)}>
-            {category.name}
-          </li>
-        ))}
-      </ul>
+
+      <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        '& > *': {
+          m: 1,
+        },
+      }}
+    >
+      <ButtonGroup variant="text" aria-label="text button group">
+      {categories.map((category) => (
+        <Button
+        key={category.id}
+        onClick={() => handleCategoryClick(category.name)}
+        >{category.name}</Button>
+                ))}
+      </ButtonGroup>
+    </Box>
+
     </div>
   );
 };
