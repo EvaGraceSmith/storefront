@@ -47,4 +47,20 @@ The following user/developer stories detail the major functionality for this pha
 * As a user, I want to choose a category and see a list of all available products matching that category.
 * As a user, I want a clean, easy to use user interface so that I can shop the online store with confidence.
 
-![Phase 1 UML](./assets/phase1UML.png)
+![Phase 1 UML](./src/assets/phase1UML.png)
+
+### Links:
+
+[Deployment: CodeSandbox on redux branch](https://codesandbox.io/p/github/EvaGraceSmith/storefront/redux?workspaceId=0f6b3b9a-f258-4570-996a-1c11d92f10b3)
+
+
+### Collaborators
+
+Ryan Galloway - Instructor
+Daniel Frey - TA
+Mark Smith - Tutor
+
+
+!["Storefront"](./src/assets/storefront.jpg)
+
+Image by <a href="https://pixabay.com/users/foundry-923783/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=832188">Foundry Co</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=832188">Pixabay</a>
