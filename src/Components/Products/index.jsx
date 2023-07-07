@@ -1,10 +1,10 @@
-import React from 'react';
 import { useSelector } from 'react-redux';
 
 const Products = () => {
-  const selectedCategoryId = useSelector((state) => state.categories.selectedCategoryId);
+  const selectedCategory = useSelector((state) => state.categories.activeCategory);
   const products = useSelector((state) =>
-    state.products.filter((product) => product.categoryId === selectedCategoryId)
+    state.products.filter((product) => 
+        product.category === selectedCategory),
   );
 
   return (
