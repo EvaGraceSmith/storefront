@@ -49,6 +49,13 @@ The following user/developer stories detail the major functionality for this pha
 
 ![Phase 1 UML](./src/assets/phase1UML.png)
 
+### AI testing prompts:
+
+Using this code, could you write tests that utilize jest, and verify the following:
+As a user, I expect to see a list of available product categories in the store so that I can easily browse products.
+As a user, I want to choose a category and see a list of all available products matching that category.
+As a user, I want a clean, easy to use user interface so that I can shop the online store with confidence.
+
 ### Links:
 
 [Deployment: CodeSandbox on redux branch](https://codesandbox.io/p/github/EvaGraceSmith/storefront/redux?workspaceId=0f6b3b9a-f258-4570-996a-1c11d92f10b3)
