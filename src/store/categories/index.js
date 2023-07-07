@@ -10,9 +10,9 @@ export const selectCategory = (categoryId) => ({
 // Reducer
 const initialState = {
   categories: [
-    { id: 1, name: 'category1', displayName: 'Category 1', description: 'Description 1' },
-    { id: 2, name: 'category2', displayName: 'Category 2', description: 'Description 2' },
-    { id: 3, name: 'category3', displayName: 'Category 3', description: 'Description 3' },
+    { id: 1, name: 'electronics', displayName: 'Electronics' },
+    { id: 2, name: 'food', displayName: 'Food' },
+    { id: 3, name: 'clothing', displayName: 'Clothing' },
   ],
   activeCategory: null,
 };

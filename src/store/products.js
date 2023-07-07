@@ -1,8 +1,11 @@
 const initialState = [
-    { id: 1, name: 'Product 1', categoryId: 'category1', description: 'Description 1', price: 10, inventoryCount: 5 },
-    { id: 2, name: 'Product 2', categoryId: 'category1', description: 'Description 2', price: 15, inventoryCount: 10 },
-    { id: 3, name: 'Product 3', categoryId: 'category2', description: 'Description 3', price: 20, inventoryCount: 8 },
-    { id: 4, name: 'Product 4', categoryId: 'category3', description: 'Description 4', price: 25, inventoryCount: 3 },
+    { id:1, name: 'TV', category: 'electronics', price: 699.00, inStock: 5 },
+    { id:2, name: 'Radio', category: 'electronics', price: 99.00, inStock: 15 },
+    { id:3, name: 'Shirt', category: 'clothing', price: 9.00, inStock: 25 },
+    { id:4, name: 'Socks', category: 'clothing', price: 12.00, inStock: 10 },
+    { id:5, name: 'Apples', category: 'food', price: .99, inStock: 500 },
+    { id:6, name: 'Eggs', category: 'food', price: 1.99, inStock: 12 },
+    { id:7, name: 'Bread', category: 'food', price: 2.39, inStock: 90 },
   ];
   
   const productsReducer = (state = initialState, action) => {
