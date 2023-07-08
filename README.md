@@ -82,7 +82,7 @@ Application Flow:
 * Clicks the delete button on an item and sees the item removed (see stretch goals for this lab).
 * Changes the cart total in the header. If two different products are in the cart you should see: CART (2)
 
-![Phase 1 UML](./src/assets/phase1UML.png)
+![Phase 2 UML](./src/assets/phase2UML.png)
 
 ### AI testing prompts:
 
