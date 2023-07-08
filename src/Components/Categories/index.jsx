@@ -15,7 +15,7 @@ const Categories = () => {
 
   return (
     <div>
-      <h2>Categories</h2>
+      <h2>Browse our Categories</h2>
 
       <Box
       sx={{
