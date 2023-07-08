@@ -5,15 +5,20 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { createSelector } from 'reselect';
 
-
+// Create a selector function using createSelector
+const selectProductsByCategory = createSelector(
+  state => state.products,
+  state => state.categories.activeCategory,
+  (products, selectedCategory) =>
+    products.filter(product => product.category === selectedCategory)
+);
 
 export default function Products() {
-    const selectedCategory = useSelector((state) => state.categories.activeCategory);
-    const products = useSelector((state) =>
-        state.products.filter((product) =>
-            product.category === selectedCategory),
-    );
+  const selectedCategory = useSelector(state => state.categories.activeCategory);
+  const products = useSelector(state => selectProductsByCategory(state, selectedCategory));
+
 
     return (
         <div>
@@ -42,6 +47,6 @@ export default function Products() {
 
         </div>
     );
-};
+}
 
 
