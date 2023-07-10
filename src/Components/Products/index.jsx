@@ -7,6 +7,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { createSelector } from 'reselect';
 import { add } from '../../store/actions';
+import { getProducts } from '../../store/products';
+import { useEffect } from 'react';
 // Create a selector function using createSelector
 const selectProductsByCategory = createSelector(
   state => state.products,
@@ -16,20 +18,30 @@ const selectProductsByCategory = createSelector(
 );
 
 export default function Products() {
-  const selectedCategory = useSelector(state => state.categories.activeCategory);
-  const products = useSelector(state => selectProductsByCategory(state, selectedCategory));
+   const selectedCategory = useSelector(state => state.categories.activeCategory);
+  const {products} = useSelector(state => state.products);
+// const products = useSelector(state => selectProductsByCategory(selectedProducts, selectedCategory));
+//const products = selectedProducts.filter(product => product.category === selectedCategory)
+
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    dispatch(getProducts());
+  }, [products]);
+  //console.log('products', products);
 
     return (
         <div>
             <h2>Products</h2>
-            {products.map((product) => (
-                <Card key={product.id}
+            { products.map((product, i) => {
+                const url = 'https://source.unsplash.com/random?' + product.name
+                return product.category === selectedCategory &&
+                  product.inStock > 0 ? ( 
+                <Card key={product._id}
                 sx={{ maxWidth: 345 }}>
                     <CardMedia
                         sx={{ height: 140 }}
-                        image={product.url}
+                        image={url}
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
@@ -46,7 +58,11 @@ export default function Products() {
                         <Button size="small">VIEW DETAILS</Button>
                     </CardActions>
                 </Card>
-            ))}
+                ) : (
+                    ''
+                  );
+                })
+            }
 
         </div>
     );

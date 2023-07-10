@@ -16,7 +16,8 @@ const Categories = () => {
   };
   useEffect(() => {
     dispatch(getCategories());
-  }, []);
+  }, [categories]);
+  //console.log('categories', categories);
 
   return (
     <div>
@@ -35,7 +36,7 @@ const Categories = () => {
       <ButtonGroup variant="text" aria-label="text button group">
       {categories.map((category) => (
         <Button
-        key={category.id}
+        key={category._id}
         onClick={() => handleCategoryClick(category.name)}
         >{category.name}</Button>
                 ))}

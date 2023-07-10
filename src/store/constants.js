@@ -8,3 +8,4 @@ export const ADD = 'ADD';
 export const REMOVE = 'REMOVE';
 export const SELECT = 'SELECT';
 export const GET = 'GET';
+export const SET = 'SET';
