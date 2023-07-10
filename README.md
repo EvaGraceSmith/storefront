@@ -90,7 +90,7 @@ Application Flow:
 
 ### Links:
 
-[Deployment: CodeSandbox on redux branch]()
+[Deployment: CodeSandbox on redux branch](https://codesandbox.io/p/github/EvaGraceSmith/storefront/combined-reducers?file=/.codesandbox/tasks.json:1,1&workspaceId=0f6b3b9a-f258-4570-996a-1c11d92f10b3)
 
 ### Collaborators
 
