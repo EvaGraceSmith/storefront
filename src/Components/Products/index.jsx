@@ -1,4 +1,4 @@
-import { useSelector } from 'react-redux';
+import { useSelector ,useDispatch} from 'react-redux';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { createSelector } from 'reselect';
-
+import { add } from '../../store/actions';
 // Create a selector function using createSelector
 const selectProductsByCategory = createSelector(
   state => state.products,
@@ -18,6 +18,7 @@ const selectProductsByCategory = createSelector(
 export default function Products() {
   const selectedCategory = useSelector(state => state.categories.activeCategory);
   const products = useSelector(state => selectProductsByCategory(state, selectedCategory));
+  const dispatch = useDispatch();
 
 
     return (
@@ -39,7 +40,9 @@ export default function Products() {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <Button size="small">ADD TO CART</Button>
+                        <Button 
+                          onClick={() => dispatch(add(product))}
+                        size="small">ADD TO CART</Button>
                         <Button size="small">VIEW DETAILS</Button>
                     </CardActions>
                 </Card>

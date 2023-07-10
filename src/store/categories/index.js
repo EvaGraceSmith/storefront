@@ -1,11 +1,4 @@
-// Action Types
-const SELECT_CATEGORY = 'SELECT_CATEGORY';
 
-// Action Creators
-export const selectCategory = (categoryId) => ({
-  type: SELECT_CATEGORY,
-  payload: categoryId,
-});
 
 // Reducer
 const initialState = {
@@ -19,7 +12,7 @@ const initialState = {
 
 const categoriesReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SELECT_CATEGORY:
+    case 'SELECT_CATEGORY':
       return { ...state, activeCategory: action.payload };
     default:
       return state;
