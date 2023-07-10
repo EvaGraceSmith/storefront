@@ -1,3 +1,13 @@
+
+import { createAction } from '@reduxjs/toolkit';
+import { ADD, REMOVE, SELECT, GET } from './constants';
+
+// create actions used by candidates and votes reducers
+export const cartAdd = createAction(ADD);
+export const cartRemove = createAction(REMOVE);
+export const selectedCategory = createAction(SELECT);
+//export const getCategories = createAction(GET);
+
 export const set = (category) => {
     return {
       type: 'SET',
@@ -21,6 +31,6 @@ export const set = (category) => {
   
   // Action Creators
 export const selectCategory = (categoryId) => ({
-  type: "SELECT_CATEGORY",
+  type: "SELECT",
   payload: categoryId,
 });
