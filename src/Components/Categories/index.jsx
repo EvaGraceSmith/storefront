@@ -3,6 +3,8 @@ import { selectCategory } from '../../store/actions';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Box from '@mui/material/Box';
+import { useEffect } from 'react';
+import { getCategories } from '../../store/categories';
 
 const Categories = () => {
   const {categories} = useSelector((state) => state.categories);
@@ -12,6 +14,10 @@ const Categories = () => {
     console.log('handleCategoryClick', categoryId);
     dispatch(selectCategory(categoryId));
   };
+  useEffect(() => {
+    dispatch(getCategories());
+  }, [categories]);
+  //console.log('categories', categories);
 
   return (
     <div>
@@ -30,7 +36,7 @@ const Categories = () => {
       <ButtonGroup variant="text" aria-label="text button group">
       {categories.map((category) => (
         <Button
-        key={category.id}
+        key={category._id}
         onClick={() => handleCategoryClick(category.name)}
         >{category.name}</Button>
                 ))}
