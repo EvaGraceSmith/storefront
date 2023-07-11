@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import { useSelector } from 'react-redux';
 
 export default function Header() {
-  const { cart } = useSelector(state => state.cart);
+  const { cart } = useSelector(state => state);
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">

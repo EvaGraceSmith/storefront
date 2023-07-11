@@ -1,47 +1,48 @@
 import { useSelector ,useDispatch} from 'react-redux';
+import { useEffect } from 'react';
+import { When } from 'react-if';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { createSelector } from 'reselect';
-import { add } from '../../store/actions';
-import { getProducts } from '../../store/products';
-import { useEffect } from 'react';
-// Create a selector function using createSelector
-const selectProductsByCategory = createSelector(
-  state => state.products,
-  state => state.categories.activeCategory,
-  (products, selectedCategory) =>
-    products.filter(product => product.category === selectedCategory)
-);
+import Grid from '@mui/material/Grid';
+import { addToCart } from '../../store/cart/cart';
+import { decrementInventoryOnAdd, getProducts } from '../../store/products/products';
+
 
 export default function Products() {
-   const selectedCategory = useSelector(state => state.categories.activeCategory);
-  const {products} = useSelector(state => state.products);
-// const products = useSelector(state => selectProductsByCategory(selectedProducts, selectedCategory));
-//const products = selectedProducts.filter(product => product.category === selectedCategory)
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getProducts());
-  }, [products]);
-  //console.log('products', products);
-
+        const { activeCategory } = useSelector((state) => state.categories);
+        const { products } = useSelector((state) => state);
+         console.log('this is products.....', products)
+        const dispatch = useDispatch();
+      
+        const addDispatcher = (product) => {
+          dispatch(addToCart(product));
+          dispatch(decrementInventoryOnAdd(product));
+        };
+      
+        useEffect(() => {
+          dispatch(getProducts(activeCategory))
+        }, [activeCategory]);
+      
     return (
         <div>
+            
+      <When condition={activeCategory}>
             <h2>Products</h2>
-            { products.map((product, i) => {
-                const url = 'https://source.unsplash.com/random?' + product.name
-                return product.category === selectedCategory &&
-                  product.inStock > 0 ? ( 
+            <Grid container spacing={2} width="80%" margin="auto">
+          {
+            products.map((product, index) => (
+              <Grid key={`products${index}`} item xs={12} md={6} lg={4} >
+           
                 <Card key={product._id}
                 sx={{ maxWidth: 345 }}>
                     <CardMedia
                         sx={{ height: 140 }}
-                        image={url}
+                        image={`https://source.unsplash.com/random?${product.name}`}
+                        title={product.name}
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
@@ -53,19 +54,16 @@ export default function Products() {
                     </CardContent>
                     <CardActions>
                         <Button 
-                          onClick={() => dispatch(add(product))}
+                          onClick={() => addDispatcher(product)}
                         size="small">ADD TO CART</Button>
                         <Button size="small">VIEW DETAILS</Button>
                     </CardActions>
                 </Card>
-                ) : (
-                    ''
-                  );
-                })
+                </Grid>
+            ))
             }
-
+            </Grid>
+            </When>
         </div>
     );
 }
-
-

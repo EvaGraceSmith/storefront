@@ -4,6 +4,7 @@ import Categories from './Components/Categories/index';
 import Products from './Components/Products/index';
 import ActiveCategory from './Components/ActiveCategory/index';
 import SimpleCart from './Components/SimpleCart/index';
+import './App.css'
 
 const App = () => {
   return (
