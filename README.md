@@ -82,7 +82,7 @@ Application Flow:
 * Clicks the delete button on an item and sees the item removed (see stretch goals for this lab).
 * Changes the cart total in the header. If two different products are in the cart you should see: CART (2)
 
-![Phase 1 UML](./src/assets/phase1UML.png)
+![Phase 2 UML](./src/assets/phase2UML.png)
 
 ### AI testing prompts:
 
@@ -90,7 +90,7 @@ Application Flow:
 
 ### Links:
 
-[Deployment: CodeSandbox on redux branch]()
+[Deployment: CodeSandbox on redux branch](https://codesandbox.io/p/github/EvaGraceSmith/storefront/combined-reducers?file=/.codesandbox/tasks.json:1,1&workspaceId=0f6b3b9a-f258-4570-996a-1c11d92f10b3)
 
 ### Collaborators
 

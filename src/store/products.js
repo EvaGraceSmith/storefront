@@ -8,10 +8,27 @@ const initialState = [
     { id:7, name: 'Bread', category: 'food', price: 2.39, inStock: 90, description: 'A loaf of bread', url: 'https://source.unsplash.com/random?bread' },
   ];
   
-  const productsReducer = (state = initialState, action) => {
-    // Handle other actions if needed
-    return state;
-  };
+
+  function productsReducer(state = initialState, action) {
+    switch (action.type) {
+      case 'SET':
+        return {
+          products: initialState.products.filter(product => product.category === action.payload.name)
+        };
+        case 'ADD':
+          return {
+            ...state,
+            products: state.products.map(product => product.name === action.payload.name ? {...product, inStock: product.inStock -1} : product),
+          };
+          case 'REMOVE':
+            return {
+              ...state,
+              products: state.products.map(product => product.name === action.payload.name ? {...product, inStock: product.inStock + 1} : product),
+            }
+      default:
+        return state;
+    }
+  }
   
   export default productsReducer;
   
