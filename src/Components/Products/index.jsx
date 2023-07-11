@@ -14,8 +14,8 @@ import { decrementInventoryOnAdd, getProducts } from '../../store/products/produ
 
 export default function Products() {
         const { activeCategory } = useSelector((state) => state.categories);
-        const { products } = useSelector((state) => state);
-         console.log('this is products.....', products)
+        const  products = useSelector((state) => state.products);
+        //  console.log('this is products.....', products)
         const dispatch = useDispatch();
       
         const addDispatcher = (product) => {
