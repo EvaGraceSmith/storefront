@@ -105,7 +105,7 @@ As a user, I want to know to that when I add an item to my cart, that it is remo
 
 ### Links:
 
-[Deployment: CodeSandbox on thunk branch]()
+[Deployment: CodeSandbox on thunk branch](https://codesandbox.io/p/github/EvaGraceSmith/storefront/thunk?file=/.codesandbox/tasks.json:1,1&workspaceId=0f6b3b9a-f258-4570-996a-1c11d92f10b3)
 
 
 ### Phase 4 Requirements
