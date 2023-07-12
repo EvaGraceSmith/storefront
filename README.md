@@ -84,7 +84,6 @@ Application Flow:
 
 ![Phase 2 UML](./src/assets/phase2UML.png)
 
-### AI testing prompts:
 
 
 
