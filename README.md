@@ -123,6 +123,10 @@ As a user, I want to view my full cart and initiate the checkout process so that
 
 [Deployment: CodeSandbox on rtk branch]()
 
+### Setting up tests
+
+[How to set up a testing Library in Vite and React](https://zaferayan.medium.com/how-to-setup-jest-and-react-testing-library-in-vite-project-2600f2d04bdd)
+
 ### Collaborators
 
 Ryan Galloway - Instructor
