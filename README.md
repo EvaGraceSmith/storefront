@@ -129,9 +129,9 @@ As a user, I want to view my full cart and initiate the checkout process so that
 
 ### Collaborators
 
-Ryan Galloway - Instructor
-Daniel Frey - TA
-Mark Smith - Tutor
+[Ryan Galloway - Instructor](https://github.com/rkgallaway) 
+[Daniel Frey - TA](https://github.com/DSFrey)
+[Mark Smith - Tutor](https://github.com/markmrsmith)
 
 
 !["Storefront"](./src/assets/storefront.jpg)

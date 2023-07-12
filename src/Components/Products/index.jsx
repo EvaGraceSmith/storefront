@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import { addToCart } from '../../store/cart/cart';
 import { decrementInventoryOnAdd, getProducts } from '../../store/products/products';
-
+import { Link } from 'react-router-dom';
 
 export default function Products() {
         const { activeCategory } = useSelector((state) => state.categories);
@@ -56,7 +56,11 @@ export default function Products() {
                         <Button 
                           onClick={() => addDispatcher(product)}
                         size="small">ADD TO CART</Button>
-                        <Button size="small">VIEW DETAILS</Button>
+                        <Button size="small"
+                        
+                        component={Link}
+                        to={`product/${product._id}`}
+                        >VIEW DETAILS</Button>
                     </CardActions>
                 </Card>
                 </Grid>
