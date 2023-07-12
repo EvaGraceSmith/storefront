@@ -1,10 +1,11 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { selectCategory } from '../../store/actions';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Box from '@mui/material/Box';
 import { useEffect } from 'react';
-import { getCategories } from '../../store/categories';
+import { getCategories, setCategory } from '../../store/categories';
+// import { setProducts } from '../../store/products/products';
+
 
 const Categories = () => {
   const {categories} = useSelector((state) => state.categories);
@@ -12,7 +13,8 @@ const Categories = () => {
 
   const handleCategoryClick = (categoryId) => {
     console.log('handleCategoryClick', categoryId);
-    dispatch(selectCategory(categoryId));
+    dispatch(setCategory(categoryId));
+  //  dispatch(selectCategory(categoryId));
   };
   useEffect(() => {
     dispatch(getCategories());
