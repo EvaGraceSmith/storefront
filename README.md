@@ -92,6 +92,37 @@ Application Flow:
 
 [Deployment: CodeSandbox on redux branch](https://codesandbox.io/p/github/EvaGraceSmith/storefront/combined-reducers?file=/.codesandbox/tasks.json:1,1&workspaceId=0f6b3b9a-f258-4570-996a-1c11d92f10b3)
 
+
+### Phase 3 Requirements
+In phase 3, we will be connecting our Virtual Store to a live API so that our data is persistent and able to be separately managed.
+
+The user stories from Phases 1 and 2 remain unchanged. For this phase, we are now adding the following new user stories to meet the new requirements.
+
+As a user, I want to interact with live inventory so that I have confidence that the displayed products are in stock.
+As a user, I want to know to that when I add an item to my cart, that it is removed from inventory so that no other users can purchase it.
+
+![Phase 3  UML](./src/assets/phase3UML.png)
+
+### Links:
+
+[Deployment: CodeSandbox on thunk branch]()
+
+
+### Phase 4 Requirements
+
+In phase 4, we will be completing work on our Virtual Store by adding two full page views to the application: Product Details and Checkout.
+
+The user stories from Phases 1, 2 and 3 remain unchanged. For this phase, we are now adding the following new user stories to meet the new requirements.
+
+As a user, I want to see a full detail view of a product so that I can make a more informed choice about purchasing it.
+As a user, I want to view my full cart and initiate the checkout process so that I can purchase my items and have them delivered.
+
+![Phase 4 UML](./src/assets/phase4UML.png)
+
+### Links:
+
+[Deployment: CodeSandbox on rtk branch]()
+
 ### Collaborators
 
 Ryan Galloway - Instructor
