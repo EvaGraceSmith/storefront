@@ -120,7 +120,7 @@ As a user, I want to view my full cart and initiate the checkout process so that
 
 ### Links:
 
-[Deployment: CodeSandbox on rtk branch]()
+[Deployment: CodeSandbox on rtk branch](https://codesandbox.io/p/github/EvaGraceSmith/storefront/rtk?file=%2F.codesandbox%2Ftasks.json%3A1%2C1&workspaceId=0f6b3b9a-f258-4570-996a-1c11d92f10b3)
 
 ### Setting up tests
 
