@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { When } from "react-if";
+import { If, Else, When, Unless} from "react-if";
 import * as React from 'react';
 import Footer from "../Footer";
 import InfoOutlined from '@mui/icons-material/InfoOutlined';
@@ -97,8 +97,10 @@ sx={{
 </Card>
 <Footer />
 </When>
+<Unless condition={cart.length > 0}>
             <h2>Shopping Cart</h2>
             <h3>CART IS EMPTY</h3>
+            </Unless>
             <Button color="inherit"
               component={Link}
               to={`/`}
