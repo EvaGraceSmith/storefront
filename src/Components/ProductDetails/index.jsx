@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
 // import { addDispatcher } from '../../store/cart/cart';
 import { addToCart } from '../../store/cart/cart';  
-import { decrementInventoryOnAdd, } from '../../store/products';
+import { decrementInventoryOnAdd, } from '../../store/products/products';
 
 
 
