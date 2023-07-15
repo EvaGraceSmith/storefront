@@ -2,7 +2,7 @@
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
-import { ,addDispatcher } from '../../store/cart/cart';
+// import { addDispatcher } from '../../store/cart/cart';
 import { addToCart } from '../../store/cart/cart';  
 import { decrementInventoryOnAdd, } from '../../store/products';
 
