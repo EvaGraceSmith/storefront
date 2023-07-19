@@ -84,7 +84,6 @@ Application Flow:
 
 ![Phase 2 UML](./src/assets/phase2UML.png)
 
-### AI testing prompts:
 
 
 
@@ -105,7 +104,7 @@ As a user, I want to know to that when I add an item to my cart, that it is remo
 
 ### Links:
 
-[Deployment: CodeSandbox on thunk branch]()
+[Deployment: CodeSandbox on thunk branch](https://codesandbox.io/p/github/EvaGraceSmith/storefront/thunk?file=/.codesandbox/tasks.json:1,1&workspaceId=0f6b3b9a-f258-4570-996a-1c11d92f10b3)
 
 
 ### Phase 4 Requirements
@@ -121,13 +120,17 @@ As a user, I want to view my full cart and initiate the checkout process so that
 
 ### Links:
 
-[Deployment: CodeSandbox on rtk branch]()
+[Deployment: CodeSandbox on rtk branch](https://codesandbox.io/p/github/EvaGraceSmith/storefront/rtk?file=%2F.codesandbox%2Ftasks.json%3A1%2C1&workspaceId=0f6b3b9a-f258-4570-996a-1c11d92f10b3)
+
+### Setting up tests
+
+[How to set up a testing Library in Vite and React](https://zaferayan.medium.com/how-to-setup-jest-and-react-testing-library-in-vite-project-2600f2d04bdd)
 
 ### Collaborators
 
-Ryan Galloway - Instructor
-Daniel Frey - TA
-Mark Smith - Tutor
+[Ryan Galloway - Instructor](https://github.com/rkgallaway) 
+[Daniel Frey - TA](https://github.com/DSFrey)
+[Mark Smith - Tutor](https://github.com/markmrsmith)
 
 
 !["Storefront"](./src/assets/storefront.jpg)

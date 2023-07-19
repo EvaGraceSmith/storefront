@@ -1,19 +1,23 @@
 import Header from './Components/Header/index';
 import Footer from './Components/Footer/index';
-import Categories from './Components/Categories/index';
-import Products from './Components/Products/index';
-import ActiveCategory from './Components/ActiveCategory/index';
-import SimpleCart from './Components/SimpleCart/index';
+import Storefront from './Components/Storefront/index';
+import ProductDetails from './Components/ProductDetails/index';
+import ShoppingCart from './Components/ShoppingCart/index';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import './App.css'
 
 const App = () => {
   return (
     <div>
+      <BrowserRouter>
       <Header />
-      <Categories />
-      <SimpleCart/>
-      <ActiveCategory />
-      <Products />
+      <Routes>
+        <Route path="/" element={<Storefront />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
+        <Route path="/cart" element={<ShoppingCart />} />
+      </Routes>
+      </BrowserRouter>
       <Footer />
     </div>
   );
